@@ -8,7 +8,7 @@ const fadeUp = (delay = 0) => ({
 
 export default function Hero() {
   return (
-    <section className="hero-page">
+    <section className="hero-sec">
       {/* Blobs */}
       <div className="page-blob">
         {[

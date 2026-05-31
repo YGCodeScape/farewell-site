@@ -34,7 +34,12 @@ body {
   color: var(--text);
   overflow-x: hidden;
 }
-.hero-page {
+
+/* ========================= */
+/* =======HERO SECTION====== */
+/* ========================= */
+
+.hero-sec {
   width: 100%;
   height: 100vh;
   display: flex;
@@ -114,7 +119,108 @@ body {
   border-radius: 20px;
 }
 
+/* ========================= */
+/* ======TEACHER GRID======= */
+/* ========================= */
 
+.TG-sec {
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  padding:20px;
+}
+.TG-sec-subtext {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.5rem;
+}
+.TG-title {
+  font-family: var(--text);
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: var(--text);
+}
+.TG-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+.TG-single-cards {
+  border-radius: 20px;
+  padding: 1.25rem 1rem;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+.TG-icon {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+.Tg-card-image {
+  width: 54px;
+  height: 54px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  background: var(--bg);
+}
+.TG-card-name {
+  font-family: var(--font-text);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 3px;
+  line-height: 1.2;
+}
+.TG-card-role {
+  font-size: 11px;
+  columns: var(--muted);
+}
+.TG-card-tag {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 100px;
+  background: var(--bg);
+  color: var(--text);
+  margin-top: 0.6rem;
+}
+
+.TG-card-full {
+  border-radius: 20px;
+  padding: 1.25rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+
+
+/* ========================= */
+/* =======ANIMATIONS======== */
+/* ========================= */
 
 @keyframes floatBlob {
   0%, 100% { transform: translateY(0px) scale(1); }

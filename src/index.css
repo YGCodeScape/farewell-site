@@ -125,8 +125,8 @@ body {
 
 .TG-sec {
   width: 100%;
-  height: 100vh;
-  margin: 0 auto;
+  height: 100%;
+  margin: 30px 0;
   padding:20px;
 }
 .TG-sec-subtext {
@@ -215,8 +215,81 @@ body {
   position: relative;
   overflow: hidden;
 }
-
-
+/* ========================= */
+/* =======OPEN LATTER======== */
+/* ========================= */
+.OL-sec {
+  width: 100%;
+  height: 100%;
+  margin: 30px 0;
+}
+.OL-holder {
+  position: relative;
+  border-radius: 29px;
+  overflow: hidden;
+  background: #fcfffd;
+  border: 1px solid rgba(0, 0, 0, 0.39);
+  box-shadow: 0 8px 40px rgba(0,0,0,0.06);
+  padding: 2.5rem 3rem 2.5rem;
+}
+.OL-paper-lines {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+.OL-left-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 40px;
+  width: 1.5px;
+  background: rgba(220, 80, 80, 0.726);
+}
+.OL-wax-seal {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  font-size: 32px;
+  opacity: 3;
+  z-index: 0;
+  user-select: none;
+}
+.OL-letter-content {
+  position: relative;
+  z-index: 1;
+}
+.OL-latter-label {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.15px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.5rem;
+}
+.OL-letter-title {
+  font-family: var(--font-text);
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 2rem;
+}
+.OL-shayari-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.OL-signature {
+  margin-top: 2.5rem;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.Ol-signature-line {
+  flex: 1;
+  height: 1;
+  background: rgba(0,0,0,0.08);
+}
 
 /* ========================= */
 /* =======ANIMATIONS======== */
@@ -229,4 +302,12 @@ body {
 @keyframes scrollPulse {
   0%, 100% { opacity: 0.4; transform: scaleY(1); }
   50% { opacity: 1; transform: scaleY(1.2); }
+}
+
+@media screen and (min-width: 1025px) {
+    .OL-sec {
+      padding: 2rem 1.25rem 3rem;
+      max-width: 480px;
+      margin: 0 auto;
+    }
 }

@@ -11,24 +11,16 @@ const shayariLines = [
 
 export default function OpenLetter() {
   return (
-    <section style={{ padding: "2rem 1.25rem 3rem", maxWidth: 480, margin: "0 auto" }}>
+    <section className="OL-sec">
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.7 }}
-        style={{
-          position: "relative",
-          borderRadius: 28,
-          overflow: "hidden",
-          background: "#fffef7",
-          border: "1px solid rgba(0,0,0,0.07)",
-          boxShadow: "0 8px 40px rgba(0,0,0,0.06)",
-          padding: "2.5rem 2rem 2.5rem",
-        }}
+        className="OL-holder"
       >
         {/* Paper lines */}
-        <div style={{ position: "absolute", inset: 0, pointerEvents: "none", zIndex: 0 }}>
+        <div className="OL-paper-lines">
           {Array.from({ length: 18 }).map((_, i) => (
             <div key={i} style={{
               position: "absolute",
@@ -39,41 +31,19 @@ export default function OpenLetter() {
             }} />
           ))}
           {/* Left red margin line */}
-          <div style={{
-            position: "absolute",
-            top: 0, bottom: 0,
-            left: 48,
-            width: 1.5,
-            background: "rgba(220, 80, 80, 0.18)",
-          }} />
+          <div className="OL-left-line" />
         </div>
 
         {/* Wax seal decoration */}
-        <div style={{
-          position: "absolute", top: 16, right: 20,
-          fontSize: 32, opacity: 0.15, zIndex: 0,
-          userSelect: "none",
-        }}>📜</div>
+        <div className="OL-wax-seal">📜</div>
 
-        <div style={{ position: "relative", zIndex: 1 }}>
-          {/* Label */}
-          <p style={{
-            fontSize: 11, fontWeight: 500, letterSpacing: "0.15em",
-            textTransform: "uppercase", color: "var(--muted)", marginBottom: "0.5rem",
-          }}>
-            An open letter
-          </p>
-
-          <h2 style={{
-            fontFamily: "'Playfair Display', serif",
-            fontSize: "1.6rem", fontWeight: 600,
-            color: "var(--text)", marginBottom: "2rem",
-          }}>
-            शब्दांतून मनातलं... 🖊️
-          </h2>
-
-          {/* Shayari lines */}
-          <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
+        <div className="OL-letter-content">
+           { /* Label */}
+           <p className="OL-latter-label"> An open letter</p>
+           <h2 className="OL-letter-title"> शब्दांतून मनातलं... 🖊️ </h2>
+         
+           {/* Shayari lines */}
+           <div className="OL-shayari-lines ">
             {shayariLines.map((line, i) => (
               <motion.p
                 key={i}
@@ -100,22 +70,8 @@ export default function OpenLetter() {
           </div>
 
           {/* Signature */}
-          <div style={{
-            marginTop: "2.5rem",
-            display: "flex", alignItems: "center", gap: 12,
-          }}>
-            <div style={{
-              flex: 1, height: 1,
-              background: "rgba(0,0,0,0.08)",
-            }} />
-            <span style={{
-              fontFamily: "'Playfair Display', serif",
-              fontStyle: "italic",
-              fontSize: "0.9rem",
-              color: "var(--muted)",
-            }}>
-              with love 🌸
-            </span>
+          <div className="Ol-signature">
+            <div className="Ol-signature-line" />
           </div>
         </div>
       </motion.div>
